@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/arkaplanka5"
     tools:context=".MainActivity4">
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/duzucgen3"
         android:layout_width="72dp"
         android:layout_height="49dp"
         android:layout_marginTop="67dp"
@@ -18,7 +19,7 @@
         app:srcCompat="@drawable/resim5kk" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/kare2"
         android:layout_width="40dp"
         android:layout_height="33dp"
         android:layout_marginStart="172dp"
@@ -28,7 +29,7 @@
         app:srcCompat="@drawable/resim6kk" />
 
     <ImageView
-        android:id="@+id/imageView24"
+        android:id="@+id/yanduzucgen2"
         android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_marginTop="109dp"
@@ -40,7 +41,7 @@
         app:srcCompat="@drawable/sekil3incikk" />
 
     <ImageView
-        android:id="@+id/imageView31"
+        android:id="@+id/ydikdortgen3"
         android:layout_width="44dp"
         android:layout_height="67dp"
         android:layout_marginTop="144dp"
@@ -51,7 +52,7 @@
         app:srcCompat="@drawable/resim3inci2kk" />
 
     <ImageView
-        android:id="@+id/imageView33"
+        android:id="@+id/dikucgen3"
         android:layout_width="66dp"
         android:layout_height="84dp"
         android:layout_marginStart="26dp"
@@ -63,7 +64,7 @@
         app:srcCompat="@drawable/onekaranlik2" />
 
     <ImageView
-        android:id="@+id/imageView34"
+        android:id="@+id/eskenarucgen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
@@ -74,7 +75,7 @@
         app:srcCompat="@drawable/sekil3incikk" />
 
     <ImageView
-        android:id="@+id/imageView35"
+        android:id="@+id/eskenarucgen2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
@@ -85,62 +86,80 @@
         app:srcCompat="@drawable/sekil3incikk" />
 
     <LinearLayout
-        android:layout_width="401dp"
-        android:layout_height="80dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="5dp">
+        app:layout_constraintVertical_bias="0.666">
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/duzucgen3pre"
             android:layout_width="wrap_content"
             android:layout_height="43dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/resim5" />
 
         <ImageView
-            android:id="@+id/imageView18"
+            android:id="@+id/kare2pre"
             android:layout_width="wrap_content"
             android:layout_height="41dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/resim6" />
 
         <ImageView
-            android:id="@+id/imageView20"
+            android:id="@+id/yanduzucgen2pre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/sekil3inci" />
 
         <ImageView
-            android:id="@+id/imageView21"
+            android:id="@+id/ydikdortgen3pre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/resim3inci2" />
 
         <ImageView
-            android:id="@+id/imageView22"
+            android:id="@+id/dikucgen3pre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/one1" />
 
         <ImageView
-            android:id="@+id/imageView23"
+            android:id="@+id/eskenarucgenpre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/sekil3inci" />
 
         <ImageView
-            android:id="@+id/imageView25"
+            android:id="@+id/eskenarucgen2pre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/sekil3inci" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonNextFor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextButton"
+        android:text="Next"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.873" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

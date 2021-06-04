@@ -12,6 +12,8 @@ import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -23,6 +25,7 @@ public class MainActivity3 extends AppCompatActivity implements View.OnDragListe
     private ImageView kare;
     private ImageView yanduzucgen;
     private ImageView saguc;
+    public Button next;
 
     private ImageView ydpre;
     private ImageView ydupre;
@@ -48,11 +51,21 @@ public class MainActivity3 extends AppCompatActivity implements View.OnDragListe
     private static final String RESIM_ETIKET14 = "kpre";
     private static final String RESIM_ETIKET15 = "sugpre";
     private ViewGroup.LayoutParams layoutParams;
+
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentToMain = new Intent(this,MainActivity.class);
+        startActivity(intentToMain);
+        finish();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         //Gri Nesneler
+//next.setVisibility(View.INVISIBLE);
+        next=findViewById(R.id.Next);
         ydikdortgen = findViewById(R.id.ydikdortgen);
         ydikdortgen.setTag(RESIM_ETIKET2);
         solucgen = findViewById(R.id.solucgen);
@@ -101,9 +114,10 @@ public class MainActivity3 extends AppCompatActivity implements View.OnDragListe
         saguc.setOnDragListener(this);*/
     }
     public void next(View view){
-        Intent intent=new Intent(MainActivity3.this,MainActivity2.class);
+        Intent intent=new Intent(MainActivity3.this,MainActivity4.class);
         startActivity(intent);
     }
+    int i=0;
     @Override
     public boolean onDrag(View v, DragEvent event) {
 
@@ -111,6 +125,7 @@ public class MainActivity3 extends AppCompatActivity implements View.OnDragListe
         // Gelen olay için eylem türünü saklayın
         final int action = event.getAction();
         String tag2 = v.getTag().toString();
+
         // Hbeklenen olayların her birini andlar
         switch (action) {
             case DragEvent.ACTION_DRAG_STARTED:
@@ -132,7 +147,6 @@ public class MainActivity3 extends AppCompatActivity implements View.OnDragListe
 
                 // Yeni renk tonunda yeniden çizimi zorlamak için görünümü geçersiz kılın
                 v.invalidate();
-
                 return true;
 
             case DragEvent.ACTION_DRAG_LOCATION:
@@ -141,13 +155,11 @@ public class MainActivity3 extends AppCompatActivity implements View.OnDragListe
                 return true;
 
             case DragEvent.ACTION_DRAG_EXITED:
-
                 // Renk tonunu sarı olarak yeniden ayarlar
-               ((ImageView) v).setColorFilter(Color.YELLOW);
+                ((ImageView) v).setColorFilter(Color.YELLOW);
 
                 // Yeni renk tonunda yeniden çizimi zorlamak için görünümü geçersiz kılın
                 v.invalidate();
-
                 return true;
 
             case DragEvent.ACTION_DROP:
@@ -182,12 +194,9 @@ public class MainActivity3 extends AppCompatActivity implements View.OnDragListe
 
                 // Sürüklenen verileri içeren öğeyi alır
                 ClipData dragData = event.getClipData();
-
                 // Metin verilerini öğeden alır.
                 final String tag = dragData.getItemAt(0).getText().toString();
 
-                // Sürüklenen verileri içeren bir mesaj görüntüler.
-                Toast.makeText(MainActivity3.this, "The dragged image is " + tag, Toast.LENGTH_SHORT).show();
 
                 // Tüm renk tonlarını kapatır
                 ((ImageView) v).clearColorFilter();
@@ -200,6 +209,7 @@ public class MainActivity3 extends AppCompatActivity implements View.OnDragListe
 
             case DragEvent.ACTION_DRAG_ENDED:
                 final String adc = v.getTag().toString();
+
                 // Tüm renk tonlarını kapatır
                 ((ImageView) v).clearColorFilter();
 
@@ -208,7 +218,16 @@ public class MainActivity3 extends AppCompatActivity implements View.OnDragListe
 
                 // Sonucu kontrol edin
                 if (event.getResult()) {
-                    Toast.makeText(MainActivity3.this, "Başarılı !", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity3.this, "Başarılı !", Toast.LENGTH_SHORT).show();
+
+                    i++;
+                    if(i==7)
+                    {
+                        Toast.makeText(MainActivity3.this, "Tamamlandı !", Toast.LENGTH_SHORT).show();
+                       next.setVisibility(View.VISIBLE);
+
+                    }
+
                     if (tag2.equals(RESIM_ETIKET6))
                     {
                     kpre.setVisibility(View.INVISIBLE);
@@ -248,7 +267,7 @@ public class MainActivity3 extends AppCompatActivity implements View.OnDragListe
                 }
 
                 else {
-                    Toast.makeText(MainActivity3.this, "Tekrar Deneyin !", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(MainActivity3.this, "Tekrar Deneyin !", Toast.LENGTH_SHORT).show();
 
                    // if (adc.equals(RESIM_ETIKET3)) {
                      //   ydpre.setImageBitmap(null);

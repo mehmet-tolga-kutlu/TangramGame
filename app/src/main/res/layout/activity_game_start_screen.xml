@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/baslangic"
+    android:backgroundTintMode="screen"
+    tools:context=".GameStartScreen">
+
+    <ImageButton
+        android:id="@+id/imageButton18"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="466dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:onClick="playGame"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton20"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/play4" />
+
+    <ImageButton
+        android:id="@+id/imageButton19"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="466dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:onClick="quitGame"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton18"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/quit2" />
+
+    <ImageButton
+        android:id="@+id/imageButton20"
+        android:layout_width="195dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:onClick="helpGame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton18"
+        app:srcCompat="@drawable/help2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

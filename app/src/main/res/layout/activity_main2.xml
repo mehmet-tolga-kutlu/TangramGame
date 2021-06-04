@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/arkaplanka5"
     tools:context=".MainActivity2">
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/duzucgen"
         android:layout_width="44dp"
         android:layout_height="38dp"
         android:layout_marginTop="90dp"
@@ -18,7 +19,7 @@
         app:srcCompat="@drawable/resim7kk" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/yanucgen"
         android:layout_width="61dp"
         android:layout_height="64dp"
         android:layout_marginStart="2dp"
@@ -30,7 +31,7 @@
         app:srcCompat="@drawable/resims" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/doksanucgen2"
         android:layout_width="37dp"
         android:layout_height="33dp"
         android:layout_marginTop="190dp"
@@ -41,7 +42,7 @@
         app:srcCompat="@drawable/resim4kk" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/duzucgen2"
         android:layout_width="41dp"
         android:layout_height="33dp"
         android:layout_marginTop="185dp"
@@ -52,10 +53,10 @@
         app:srcCompat="@drawable/resim5kk" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/ydikdortgen2"
         android:layout_width="66dp"
         android:layout_height="43dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="112dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +64,7 @@
         app:srcCompat="@drawable/resiml" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/kare1"
         android:layout_width="27dp"
         android:layout_height="31dp"
         android:layout_marginStart="90dp"
@@ -74,7 +75,7 @@
         app:srcCompat="@drawable/resim6kk" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/yanucgen2"
         android:layout_width="61dp"
         android:layout_height="64dp"
         android:layout_marginTop="150dp"
@@ -85,62 +86,81 @@
         app:srcCompat="@drawable/resimk" />
 
     <LinearLayout
-        android:layout_width="413dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="376dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="400dp"
+        android:layout_height="45dp"
         android:background="@color/white"
+        android:backgroundTint="@color/cardview_shadow_end_color"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569">
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/yanucgenpre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/resim1" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/yanucgen2pre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/resim2" />
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/ydikdortgen2pre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/resim3" />
 
         <ImageView
-            android:id="@+id/imageView14"
+            android:id="@+id/doksanucgen2pre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/resim4" />
 
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/duzucgenpre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/resim5" />
 
         <ImageView
-            android:id="@+id/imageView16"
+            android:id="@+id/kare1pre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/resim6" />
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/duzucgen2pre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/resimdiger" />
+            app:srcCompat="@drawable/resim5" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonNextTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextButton"
+        android:text="Next"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.801" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
